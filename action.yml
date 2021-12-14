@@ -1,8 +1,12 @@
 name: "Notify"
 description: "Notify about new PRs/issues/discussions via MS Teams"
 inputs:
-  webhook_url: # id of input
+  webhook_url:
     description: "MS Teams Webhook URL"
+    required: true
+  prCondition:
+    description: "When to notify about a PR."
+    default: "onlyExternal"
     required: true
 runs:
   using: "node12"
