@@ -7,7 +7,8 @@
   "author": "",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc && ncc build --source-map --license licenses.txt"
+    "build": "npm i && tsc && ncc build --source-map --license licenses.txt",
+    "publishV1": "npm run build && git tag -fa v1 -m v1 && git push origin v1 --force"
   },
   "dependencies": {
     "@actions/core": "^1.6.0",
