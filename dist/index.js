@@ -48,9 +48,10 @@ switch (context.eventName) {
         newDiscussion();
         break;
     case "pull_request":
+    case "pull_request_target":
         if (context.payload.action !== "opened")
             break;
-        if (prCondition === "onlyExternal" && context.payload.pull_request.head.repo.full_name !== repositoryName)
+        if (prCondition === "onlyExternal" && context.payload.pull_request.head.repo.full_name === repositoryName)
             break;
         newPullRequest();
         break;
