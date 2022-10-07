@@ -38,10 +38,6 @@ const github = __importStar(__nccwpck_require__(5438));
 const axios_1 = __importDefault(__nccwpck_require__(8757));
 const webhookUrl = core.getInput("webhook_url");
 const prCondition = core.getInput("prCondition");
-const octo = github.getOctokit(core.getInput("token"));
-const members = octo.rest.orgs
-    .listMembers({ org: github.context.repo.owner })
-    .then((res) => res.data.map((m) => m.login));
 const context = github.context;
 const repositoryName = context.payload.repository.full_name;
 core.debug(`Executing for event '${context.eventName}' and action '${context.payload.action}'.`);
