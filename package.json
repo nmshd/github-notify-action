@@ -1,23 +1,23 @@
 {
-  "name": "notify",
-  "version": "1.0.1",
-  "private": true,
-  "description": "",
-  "license": "MIT",
-  "author": "",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "npm i && tsc && ncc build --source-map --license licenses.txt",
-    "publishV1": "npm run build && git tag -fa v1 -m v1 && git push origin v1 --force"
-  },
-  "dependencies": {
-    "@actions/core": "^1.11.1",
-    "@actions/github": "^6.0.1",
-    "axios": "^1.16.0"
-  },
-  "devDependencies": {
-    "@types/node": "^24.4.0",
-    "@vercel/ncc": "^0.38.3",
-    "typescript": "^5.9.2"
-  }
+    "name": "notify",
+    "version": "1.0.1",
+    "private": true,
+    "description": "",
+    "license": "MIT",
+    "author": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "npm i && tsc && ncc build --source-map --license licenses.txt",
+        "publishV1": "npm run build && git tag -fa v1 -m v1 && git push origin v1 --force"
+    },
+    "dependencies": {
+        "@actions/core": "^1.11.1",
+        "@actions/github": "^6.0.1",
+        "axios": "^1.16.0"
+    },
+    "devDependencies": {
+        "@types/node": "^24.4.0",
+        "@vercel/ncc": "^0.38.3",
+        "typescript": "^5.9.2"
+    }
 }
